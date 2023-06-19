@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
 }
-body{
+body{   
     overflow-x: hidden;
 }
 .fa-regular{
@@ -36,32 +36,6 @@ body{
     display: flex;
     align-items: center;
 }
-.logo source{
-    cursor: pointer;
-    width: 100%;
-}
-.src{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    display: none;
-}
-.pesquisar{
-    width: 80%;
-    height: 30px;
-    border: 1px solid grey;
-    padding-left: 10px;
-    border-radius: 10px 0px 0px 10px;
-    font-size: 16px;
-}
-.src button{
-    font-size: 18px;
-    background-color: white;
-    cursor: pointer;
-    border: none;
-}
 .menu{
     width: 70%;
     height: 100%;
@@ -84,25 +58,31 @@ body{
     display: none;
 }
 .lista1.donw, .lista2.donw, .lista3.donw, .lista4.donw, .lista5.donw{
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 70px;
     right: 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    background-color: white;
     z-index: 1;
 }
 .lista1.donw li, .lista2.donw li, .lista3.donw li, .lista4.donw li, .lista5.donw li{
-    margin-top: 10px;
-    width: 19%;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
     margin: 1%;
-    height: 100%;
+    height: 90%;
 }
+.lista1.donw li:hover, .lista2.donw li:hover, .lista3.donw li:hover, .lista4.donw li:hover, .lista5.donw li:hover{
+    transform: translateY(10px);
+    transition: 0.5s;
+} 
 .lista1.donw img, .lista2.donw img, .lista3.donw img, .lista4.donw img, .lista5.donw img{
     background-size: cover;
+    border-radius: 10px;
     width: 100%;
     height: 70%;
 }
@@ -111,7 +91,7 @@ body{
     margin-left: 10px;
 }
 .lista1.donw a, .lista2.donw a, .lista3.donw a, .lista4.donw a, .lista5.donw a{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 .nav-menu{
     width: 0%;
