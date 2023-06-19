@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-image: url(/home/assets/HD\ wallpaper_\ abstract\,\ fluid\,\ liquid\,\ artwork\,\ ArtStation\,\ red\,\ neon.jpg);
+    background-size: 100% 100%;
+    /*background: linear-gradient(to top, black, rgba(0, 0, 0, 0), black);*/
+    background-repeat: repeat;
+    overflow-x: hidden;
+}
+.fa-regular{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.visivel{
+    opacity: 1;
+}
+.center{
+    padding: 0 2%;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+.logo{
+    cursor: pointer;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 90%;
+}
+.menu{
+    width: 70%;
+    height: 100%;
+}
+.lista-menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+.lista-menu li{
+    display: flex;
+    align-items: center;
+    margin: 0px 3%;
+}
+.lista-menu a{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.lista1, .lista2, .lista3, .lista4, .lista5{
+    display: none;
+}
+.lista1.donw, .lista2.donw, .lista3.donw, .lista4.donw, .lista5.donw{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+}
+.lista1.donw li, .lista2.donw li, .lista3.donw li, .lista4.donw li, .lista5.donw li{
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
+    margin: 1%;
+    height: 90%;
+}
+.lista1.donw li:hover, .lista2.donw li:hover, .lista3.donw li:hover, .lista4.donw li:hover, .lista5.donw li:hover{
+    transform: translateY(10px);
+    transition: 0.5s;
+} 
+.lista1.donw img, .lista2.donw img, .lista3.donw img, .lista4.donw img, .lista5.donw img{
+    background-size: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 70%;
+}
+.lista1.donw li figcaption, .lista2.donw li figcaption, .lista3.donw li figcaption, .lista4.donw li figcaption, .lista5.donw li figcaption{
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.lista1.donw a, .lista2.donw a, .lista3.donw a, .lista4.donw a, .lista5.donw a{
+    color: rgb(0, 0, 0);
+}
+.nav-menu{
+    width: 0%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.nav{
+    display: none;
+    width: 28px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bars{
+    display: none;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+    background-color: black;
+}
+.container{
+    width: 100vw;
+    height: 100%;
+    padding: 0px 15%;
+    margin: 50px 0;
+}
+.conteudo{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+.box figcaption{
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.801);
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.box{
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.box1{
+    grid-area: 1 / 1 / 3 / 2;
+}
+.box1 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.box2{
+    grid-area: 1 / 2 / 2 / 3;
+} 
+.box2 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.box3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.box3 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rodape{
+    background-color: white;
+    width: 100vw;
+    height: 100px;
+    padding: 0 2%;
+    display: flex;
+}
+.social-icons{
+    width: 50%;
+    height: 100%;
+}
+.social-icons ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.social-icons ul li{
+    width: 6%;
+}
+.social-icons i{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.social{
+    width: 50%;
+    height: 100%;
+}
+.social ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.social ul li{
+    width: 15%;
+}
+.social a{
+    color: rgb(0, 0, 0);
+}
+@media (min-width: 250px) and (max-width: 900px){
+    .seta i{
+        right: 10%;
+    }
+    .logo{
+        width: 70%;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .nav-menu{
+        width: 30%;
+        display: flex;
+        justify-content: right;
+        padding-right: 20px;
+    }
+    .bars{
+        display: block;
+        margin-bottom: 5px;
+        background-color: white;
+    }
+    .navegação.ativo .bars:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+        transition: 0.3s;
+        background-color: black;
+    }
+    .navegação.ativo .bars:nth-child(2){
+        opacity: 0;
+    }
+    .navegação.ativo .bars:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+        transition: 0.3s;
+        background-color: black;
+    }
+    .lista-menu a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: black;
+    }
+    .navegação.ativo{
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+        position: fixed;
+    }
+    .menu{
+        position: fixed;
+        right: -100%;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    .lista-menu{
+        width: 99.9%;
+        height: 90vh;
+        flex-direction: column;
+    }
+    .lista-menu li{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 22vh;
+        margin: 0;
+    }
+    .lista-menu li:hover{
+        background-color: rgba(0, 0, 0, 0.144);
+    }
+    .menu.ativo{
+        right: 0px;
+    }
+    .lista1.donw, .lista2.donw, .lista3.donw, .lista4.donw{
+        display: none;
+    }
+    .container{
+        padding: 0 2%;
+        width: 100%;
+        height: 100%;
+        grid-gap: 10px;
+    }
+    .conteudo{
+        margin-top: 10px;
+    }
+    .social-icons{
+        width: 100%;
+    }
+    .social-icons ul{
+        display: flex;
+        justify-content: center;
+    }
+    .social-icons ul li{
+        display: flex;
+        justify-content: center;
+        width: 25%;
+    }
+    .social{
+        display: none;
+    }
+}
