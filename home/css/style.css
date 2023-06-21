@@ -6,12 +6,35 @@
     list-style: none;
     text-decoration: none;
 }
+@keyframes load{
+    to{transform: rotate(-360deg);}
+}
+.pre{
+    width: 80px;
+    height: 80px;
+    background-image: url('/home/assets/imagem\ de\ load.png');
+    background-position: center;
+    background-size: cover;
+    animation: load 2s infinite linear;
+}
+.caixa-load{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    display: none;
+}
 body{
     background-image: url(/home/assets/HD\ wallpaper_\ abstract\,\ fluid\,\ liquid\,\ artwork\,\ ArtStation\,\ red\,\ neon.jpg);
-    background-size: 100% 114vh;
-    background-repeat: no-repeat;
+    background-size: 100% 111vh;
+    background-repeat: repeat;
     overflow-x: hidden;
-
 }
 .fa-regular{
     color: rgb(255, 255, 255);
@@ -121,14 +144,14 @@ body{
     background-color: black;
 }
 .container{
-    background-color: rgba(0, 0, 0, 0.100);
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    display: flex;
 }
 .slider{
-    margin: 90px auto 0px auto;
     width: 800px;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 .slides{
@@ -211,6 +234,7 @@ body{
 .rodape{
     width: 100vw;
     height: 70px;
+    background-color: rgb(255, 255, 255);
     padding: 0 2%;
     display: flex;
     font-size: 15px;

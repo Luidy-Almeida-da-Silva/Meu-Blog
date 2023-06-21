@@ -77,3 +77,8 @@ function nextImage(){
 
     document.getElementById('radio'+count).checked = true;
 }
+
+function loading(){
+    document.getElementsByClassName("caixa-load")[0].style.display = "none"
+    document.getElementsByClassName("content")[0].style.display = "block"
+ }
