@@ -1,6 +1,7 @@
 const navegação = document.querySelector('.navegação');
 const menu = document.querySelector('.menu');
 const html = document.querySelector('html');
+const body = document.querySelector('body')
 const item1 = document.querySelector('.item1');
 const item2 = document.querySelector('.item2');
 const item3 = document.querySelector('.item3');
@@ -10,6 +11,14 @@ const lista2 = document.querySelector('.lista2');
 const lista3 = document.querySelector('.lista3');
 const lista4 = document.querySelector('.lista4');
 const cima = document.querySelector('.fa-regular');
+const slide = document.querySelector('.first')
+const slide2 = document.querySelector('.first2')
+const slide3 = document.querySelector('.first3')
+const slide4 = document.querySelector('.first4')
+const figcap = document.querySelector('.fig')
+const figcap2 = document.querySelector('.fig2')
+const figcap3 = document.querySelector('.fig3')
+const figcap4 = document.querySelector('.fig4')
 let timer;
 let count = 1;
 const menuativo = document.querySelector('.menu.ativo');
@@ -53,13 +62,37 @@ item4.addEventListener('mouseover', () =>{
     document.querySelector('.lista2').classList.remove('donw')
     document.querySelector('.lista3').classList.remove('donw')
 })
+
+body.addEventListener('mouseover', () =>{
+    document.querySelector('.figcap').classList.remove('legenda')
+    document.querySelector('.figcap2').classList.remove('legenda')
+    document.querySelector('.figcap3').classList.remove('legenda')
+    document.querySelector('.figcap4').classList.remove('legenda')
+})
+
+slide.addEventListener('mouseover', () =>{
+    figcap.classList.toggle('legenda')
+})
+
+slide2.addEventListener('mouseover', () =>{
+    figcap2.classList.toggle('legenda')
+})
+
+slide3.addEventListener('mouseover', () =>{
+    figcap3.classList.toggle('legenda')
+})
+
+slide4.addEventListener('mouseover', () =>{
+    figcap4.classList.toggle('legenda')
+})
+
 function exibirBotão() {
     cima.classList.add('visivel');
     clearTimeout(timer);
     timer = setTimeout(() => {
       cima.classList.remove('visivel');
     }, 2000);
-  }
+}
 
 window.addEventListener('scroll', () =>{
     exibirBotão()

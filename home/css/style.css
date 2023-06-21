@@ -19,8 +19,8 @@
 }
 .caixa-load{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -28,11 +28,14 @@
     align-items: center;
 }
 .content{
+    width: 100vw;
+    height: 100vh;
     display: none;
 }
 body{
+    max-width: 100vw;
     background-image: url(/home/assets/HD\ wallpaper_\ abstract\,\ fluid\,\ liquid\,\ artwork\,\ ArtStation\,\ red\,\ neon.jpg);
-    background-size: 100% 111vh;
+    background-size: 100vw 130vh;
     background-repeat: repeat;
     overflow-x: hidden;
 }
@@ -50,7 +53,7 @@ body{
 }
 .center{
     padding: 0 2%;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     display: flex;
     font-size: 15px;
@@ -144,9 +147,29 @@ body{
     background-color: black;
 }
 .container{
-    width: 100%;
-    height: 100vh;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+    width: 100vw;
+    height: 100%;
     padding: 0 5%;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    display: flex;
+}
+.container2{
+    background: linear-gradient(to top, black, #ad1010, black);
+    width: 100vw;
+    height: 130vh;
+    padding: 0 5%;
+    padding-top: 80px;
+    display: flex;
+}
+.container3{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), black);
+    width: 100vw;
+    height: 100%;
+    padding: 0 5%;
+    padding-top: 40px;
+    padding-bottom: 80px;
     display: flex;
 }
 .slider{
@@ -156,7 +179,7 @@ body{
 }
 .slides{
     width: 400%;
-    height: 400px;
+    height: 500px;
     display: flex;
 }
 .slides input{
@@ -169,12 +192,45 @@ body{
 }
 .slide img{
     width: 800px;
-    height: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+.coluna{
+    margin-left: 30px;
+    width: 400px;
+    height: 500px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+}
+.coluna ul{
+    width: 100%;
+    height: 100%;
+}
+.coluna li{
+    width: 100%;
+    height: 20%;
+}
+.coluna li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+}
+.coluna li figcaption{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.coluna ul li img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
 }
 .manual-navigation{
     position: absolute;
     width: 800px;
-    margin-top: 370px;
+    margin-top: 450px;
     display: flex;
     justify-content: center;
 }
@@ -212,7 +268,7 @@ body{
 .navigation-auto{
     position: absolute;
     width: 800px;
-    margin-top: 371px;
+    margin-top: 451px;
     display: flex;
     justify-content: center;
 }
@@ -230,6 +286,37 @@ body{
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: white;
+}
+.pai-fileira{
+    width:  100%;
+    height: 300px;
+}
+.fileira{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+}
+.fileira li:not(:last-child){
+    padding-right: 20px;
+}
+.fileira li a{
+    width: 100%;
+    height: 100%;
+}
+.fileira li img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.fileira figcaption{
+    width: 29vw;
+    height: 60px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.521);
+    color: white;
+    position: absolute;
+    margin-top: -64px;
 }
 .rodape{
     width: 100vw;
@@ -357,7 +444,23 @@ body{
     .container{
         padding: 0 2%;
         width: 100vw;
-        height: 100vh;    
+        height: 75vh;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .container2{
+        padding: 0 2%;
+        width: 100vw;
+        height: 90vh;    
+    }
+    .container3{
+        padding: 0 2%;
+        padding-bottom: 10px;
+        width: 100vw;
+        height: 70vh;    
+    }
+    .fileira{
+        margin-bottom: 20px;
     }
     .rodape{
         background-color: white;
