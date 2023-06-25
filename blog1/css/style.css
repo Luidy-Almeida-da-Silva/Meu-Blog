@@ -221,32 +221,19 @@ body{
         right: 5%;
     }
     .logo{
-        width: 50%;
+        width: 70%;
     }
     .logo img{
-        width: 80%;
-    }
-    .pesquisar{
-        display: none;
-    }
-    .src{
-        justify-content: right;
-        width: 35%;
-    }
-    .src button{
-        width: 40px;
-        display: block;
-        border: none;
-        background-color: white;
-        font-size: 20px;
+        width: 100%;
     }
     .nav-menu{
-        width: 50%;
+        width: 30%;
         display: flex;
         justify-content: right;
         padding-right: 20px;
     }
     .bars{
+        background-color: black;
         display: block;
         margin-bottom: 5px;
     }
