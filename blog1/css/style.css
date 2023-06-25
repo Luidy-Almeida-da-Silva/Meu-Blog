@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -28,9 +28,6 @@
     align-items: center;
 }
 .content{
-    background-image: url(/home/assets/HD\ wallpaper_\ abstract\,\ fluid\,\ liquid\,\ artwork\,\ ArtStation\,\ red\,\ neon.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     overflow-x: hidden;
 }
 body{   
@@ -51,9 +48,10 @@ body{
 .center{
     padding: 0 2%;
     width: 100vw;
-    height: 70px;
+    height: 80px;
     display: flex;
-    font-family: 'Diphylleia', serif;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 1px 1px 5px black;
 }
 .logo{
     cursor: pointer;
@@ -61,9 +59,6 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-}
-.logo img{
-    width: 90%;
 }
 .menu{
     width: 70%;
@@ -81,46 +76,53 @@ body{
     margin: 0 3%;
 }
 .lista-menu a{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .lista1, .lista2, .lista3, .lista4, .lista5{
     display: none;
 }
 .lista1.donw, .lista2.donw, .lista3.donw, .lista4.donw, .lista5.donw{
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    width: 100vw;
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 80px;
+    right: -10px;
     z-index: 1;
 }
 .lista1.donw li, .lista2.donw li, .lista3.donw li, .lista4.donw li, .lista5.donw li{
-    box-shadow: 1px 1px 10px rgb(0, 0, 0);
-    background-color: white;
-    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
     width: 20%;
     margin: 1%;
+    border-radius: 10px;
     height: 90%;
+    transition: 0.5s;
 }
 .lista1.donw li:hover, .lista2.donw li:hover, .lista3.donw li:hover, .lista4.donw li:hover, .lista5.donw li:hover{
-    transform: translateY(10px);
+    transform: scale(1.08);
     transition: 0.5s;
-} 
+}   
 .lista1.donw img, .lista2.donw img, .lista3.donw img, .lista4.donw img, .lista5.donw img{
-    background-size: cover;
+    object-fit: cover;
     border-radius: 10px;
     width: 100%;
-    height: 70%;
+    height: 100%;
 }
 .lista1.donw li figcaption, .lista2.donw li figcaption, .lista3.donw li figcaption, .lista4.donw li figcaption, .lista5.donw li figcaption{
-    font-size: 1rem;
-    margin-left: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.493);
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: -53px;
 }
 .lista1.donw a, .lista2.donw a, .lista3.donw a, .lista4.donw a, .lista5.donw a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .nav-menu{
     width: 0%;
@@ -155,8 +157,6 @@ body{
     height: 100%;
     padding: 50px 15%;
     margin-bottom: 50px;
-    color: white;
-
 }
 .conteudo h1{
     font-size: 30px;

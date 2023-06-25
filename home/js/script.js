@@ -63,12 +63,6 @@ item4.addEventListener('mouseover', () =>{
     document.querySelector('.lista3').classList.remove('donw')
 })
 
-body.addEventListener('mouseover', () =>{
-    document.querySelector('.figcap').classList.remove('legenda')
-    document.querySelector('.figcap2').classList.remove('legenda')
-    document.querySelector('.figcap3').classList.remove('legenda')
-    document.querySelector('.figcap4').classList.remove('legenda')
-})
 
 slide.addEventListener('mouseover', () =>{
     figcap.classList.toggle('legenda')
@@ -96,11 +90,15 @@ function exibirBotão() {
 
 window.addEventListener('scroll', () =>{
     exibirBotão()
+    document.querySelector('.lista1').classList.remove('donw')
+    document.querySelector('.lista2').classList.remove('donw')
+    document.querySelector('.lista3').classList.remove('donw')
+    document.querySelector('.lista4').classList.remove('donw')
 })
 
 setInterval( function(){
     nextImage();
-}, 8000)
+}, 10000)
 
 function nextImage(){
     count++;
