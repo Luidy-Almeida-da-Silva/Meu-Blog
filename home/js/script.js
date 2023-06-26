@@ -63,23 +63,6 @@ item4.addEventListener('mouseover', () =>{
     document.querySelector('.lista3').classList.remove('donw')
 })
 
-
-slide.addEventListener('mouseover', () =>{
-    figcap.classList.toggle('legenda')
-})
-
-slide2.addEventListener('mouseover', () =>{
-    figcap2.classList.toggle('legenda')
-})
-
-slide3.addEventListener('mouseover', () =>{
-    figcap3.classList.toggle('legenda')
-})
-
-slide4.addEventListener('mouseover', () =>{
-    figcap4.classList.toggle('legenda')
-})
-
 function exibirBotão() {
     cima.classList.add('visivel');
     clearTimeout(timer);

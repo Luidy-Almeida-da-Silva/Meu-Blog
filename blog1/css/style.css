@@ -22,23 +22,24 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    display: flex;
-    background-color: rgb(255, 255, 255);
+    display: flex;  
     justify-content: center;
     align-items: center;
 }
 .content{
-    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: none;
 }
 body{   
     overflow-x: hidden;
 }
 .fa-regular{
-    color: rgb(255, 255, 255);
-    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
     position: fixed;
-    bottom: 110px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -76,7 +77,15 @@ body{
     margin: 0 3%;
 }
 .lista-menu a{
+    cursor: pointer;
     color: rgb(0, 0, 0);
+}
+.lista-menu a::first-letter{
+    font-size: 12px;
+    color: rgb(65, 65, 65);
+}
+.lista-menu a:hover{
+    color: blue;
 }
 .lista1, .lista2, .lista3, .lista4, .lista5{
     display: none;
@@ -114,7 +123,7 @@ body{
 }
 .lista1.donw li figcaption, .lista2.donw li figcaption, .lista3.donw li figcaption, .lista4.donw li figcaption, .lista5.donw li figcaption{
     position: relative;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.699);
     width: 100%;
     height: 50px;
     padding-left: 10px;
@@ -155,11 +164,11 @@ body{
 .container{
     width: 100vw;
     height: 100%;
-    padding: 50px 15%;
+    padding: 10px 10%;
     margin-bottom: 50px;
 }
 .conteudo h1{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -167,7 +176,8 @@ body{
     width: 100%;
 }
 .conteudo h2{
-    margin-top: 20px;
+    font-size: 30px;
+    margin: 25px 0px;
 }
 .conteudo p{
     padding: 0 5%;
@@ -175,6 +185,7 @@ body{
     margin-bottom: 30px;
 }
 .rodape{
+    box-shadow: 1px -1px 5px black;
     background-color: white;
     width: 100vw;
     height: 100px;
@@ -248,13 +259,8 @@ body{
         transform: translateY(-7px) rotate(-45deg);
         transition: 0.3s;
     }
-    .lista-menu a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        color: black;
+    .lista-menu a::first-letter{
+        color: white;
     }
     .navegação.ativo{
         width: 30px;
