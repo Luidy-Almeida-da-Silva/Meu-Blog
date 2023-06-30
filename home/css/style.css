@@ -579,15 +579,13 @@ body{
         top: 0;
         display: block;
         right: -100%;
-        background-color: rgba(0, 0, 0, 0.26);
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: block;
         justify-content: none;
         align-items: none;
     }
     .lista1.donw, .lista2.donw, .lista3.donw, .lista4.donw, .lista5.donw{
-        background-color: rgba(0, 0, 0, 0.26);
         width: 100%;
         height: 100vh;
         display: block;
