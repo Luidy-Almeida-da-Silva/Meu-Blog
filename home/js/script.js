@@ -10,15 +10,8 @@ const lista1 = document.querySelector('.lista1');
 const lista2 = document.querySelector('.lista2');
 const lista3 = document.querySelector('.lista3');
 const lista4 = document.querySelector('.lista4');
+const container = document.querySelector('.container');
 const cima = document.querySelector('.fa-regular');
-const slide = document.querySelector('.first')
-const slide2 = document.querySelector('.first2')
-const slide3 = document.querySelector('.first3')
-const slide4 = document.querySelector('.first4')
-const figcap = document.querySelector('.fig')
-const figcap2 = document.querySelector('.fig2')
-const figcap3 = document.querySelector('.fig3')
-const figcap4 = document.querySelector('.fig4')
 let timer;
 let count = 1;
 const menuativo = document.querySelector('.menu.ativo');
@@ -26,9 +19,13 @@ const menuativo = document.querySelector('.menu.ativo');
 navegação.addEventListener('click', () =>{
     navegação.classList.toggle('ativo');
     menu.classList.toggle('ativo');
+    document.querySelector('.lista1').classList.remove('donw')
+    document.querySelector('.lista2').classList.remove('donw')
+    document.querySelector('.lista3').classList.remove('donw')
+    document.querySelector('.lista4').classList.remove('donw')
 })
 
-html.addEventListener('click', () =>{
+container.addEventListener('mouseover', () =>{
     document.querySelector('.lista1').classList.remove('donw')
     document.querySelector('.lista2').classList.remove('donw')
     document.querySelector('.lista3').classList.remove('donw')
@@ -73,10 +70,6 @@ function exibirBotão() {
 
 window.addEventListener('scroll', () =>{
     exibirBotão()
-    document.querySelector('.lista1').classList.remove('donw')
-    document.querySelector('.lista2').classList.remove('donw')
-    document.querySelector('.lista3').classList.remove('donw')
-    document.querySelector('.lista4').classList.remove('donw')
 })
 
 setInterval( function(){
@@ -95,4 +88,44 @@ function nextImage(){
 function loading(){
     document.getElementsByClassName("caixa-load")[0].style.display = "none"
     document.getElementsByClassName("content")[0].style.display = "block"
- }
+}
+
+function meuEventoMobile() {
+    item1.addEventListener('click', () =>{
+        lista1.classList.toggle('donw')
+        document.querySelector('.lista2').classList.remove('donw')
+        document.querySelector('.lista3').classList.remove('donw')
+        document.querySelector('.lista4').classList.remove('donw')
+    })
+    
+    item2.addEventListener('click', () =>{
+        lista2.classList.toggle('donw')
+        document.querySelector('.lista1').classList.remove('donw')
+        document.querySelector('.lista3').classList.remove('donw')
+        document.querySelector('.lista4').classList.remove('donw')
+    })
+    
+    item3.addEventListener('click', () =>{
+        lista3.classList.toggle('donw')
+        document.querySelector('.lista1').classList.remove('donw')
+        document.querySelector('.lista2').classList.remove('donw')
+        document.querySelector('.lista4').classList.remove('donw')
+    })
+    
+    item4.addEventListener('click', () =>{
+        lista4.classList.toggle('donw')
+        document.querySelector('.lista1').classList.remove('donw')
+        document.querySelector('.lista2').classList.remove('donw')
+        document.querySelector('.lista3').classList.remove('donw')
+    })
+
+
+}
+
+if ('ontouchstart' in window) {
+    // Dispositivo móvel
+    document.addEventListener('touchstart', meuEventoMobile);
+} else {
+    // Não é um dispositivo móvel
+    // Coloque aqui um código alternativo para lidar com outros dispositivos
+}
