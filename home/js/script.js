@@ -17,120 +17,111 @@ let count = 1;
 const menuativo = document.querySelector('.menu.ativo');
 
 navegação.addEventListener('click', () =>{
-    navegação.classList.toggle('ativo');
-    menu.classList.toggle('ativo');
-    document.querySelector('.lista1').classList.remove('donw')
-    document.querySelector('.lista2').classList.remove('donw')
-    document.querySelector('.lista3').classList.remove('donw')
-    document.querySelector('.lista4').classList.remove('donw')
+  navegação.classList.toggle('ativo');
+  menu.classList.toggle('ativo');
+  document.querySelector('.lista1').classList.remove('donw')
+  document.querySelector('.lista2').classList.remove('donw')
+  document.querySelector('.lista3').classList.remove('donw')
+  document.querySelector('.lista4').classList.remove('donw')
 })
 
-function meuEventoPC() {
-    container.addEventListener('mouseover', () =>{
-        document.querySelector('.lista1').classList.remove('donw')
-        document.querySelector('.lista2').classList.remove('donw')
-        document.querySelector('.lista3').classList.remove('donw')
-        document.querySelector('.lista4').classList.remove('donw')
-    })
-    
-    item1.addEventListener('mouseover', () =>{
-        lista1.classList.toggle('donw')
-        document.querySelector('.lista2').classList.remove('donw')
-        document.querySelector('.lista3').classList.remove('donw')
-        document.querySelector('.lista4').classList.remove('donw')
-    })
-    
-    item2.addEventListener('mouseover', () =>{
-        lista2.classList.toggle('donw')
-        document.querySelector('.lista1').classList.remove('donw')
-        document.querySelector('.lista3').classList.remove('donw')
-        document.querySelector('.lista4').classList.remove('donw')
-    })
-    
-    item3.addEventListener('mouseover', () =>{
-        lista3.classList.toggle('donw')
-        document.querySelector('.lista1').classList.remove('donw')
-        document.querySelector('.lista2').classList.remove('donw')
-        document.querySelector('.lista4').classList.remove('donw')
-    })
-    
-    item4.addEventListener('mouseover', () =>{
-        lista4.classList.toggle('donw')
-        document.querySelector('.lista1').classList.remove('donw')
-        document.querySelector('.lista2').classList.remove('donw')
-        document.querySelector('.lista3').classList.remove('donw')
-    })
-  }
+container.addEventListener('mouseover', () =>{
+  document.querySelector('.lista1').classList.remove('donw')
+  document.querySelector('.lista2').classList.remove('donw')
+  document.querySelector('.lista3').classList.remove('donw')
+  document.querySelector('.lista4').classList.remove('donw')
+})
+
+item1.addEventListener('mouseover', () =>{
+  lista1.classList.toggle('donw')
+  document.querySelector('.lista2').classList.remove('donw')
+  document.querySelector('.lista3').classList.remove('donw')
+  document.querySelector('.lista4').classList.remove('donw')
+})
+
+item2.addEventListener('mouseover', () =>{
+  lista2.classList.toggle('donw')
+  document.querySelector('.lista1').classList.remove('donw')
+  document.querySelector('.lista3').classList.remove('donw')
+  document.querySelector('.lista4').classList.remove('donw')
+})
+
+item3.addEventListener('mouseover', () =>{
+  lista3.classList.toggle('donw')
+  document.querySelector('.lista1').classList.remove('donw')
+  document.querySelector('.lista2').classList.remove('donw')
+  document.querySelector('.lista4').classList.remove('donw')
+})
+
+item4.addEventListener('mouseover', () =>{
+  lista4.classList.toggle('donw')
+  document.querySelector('.lista1').classList.remove('donw')
+  document.querySelector('.lista2').classList.remove('donw')
+  document.querySelector('.lista3').classList.remove('donw')
+})
   
-  function isDispositivoMovel() {
-    return ('ontouchstart' in window || navigator.maxTouchPoints);
-  }
+function isDispositivoMovel() {
+  return ('ontouchstart' in window || navigator.maxTouchPoints);
+}
   
-  if (!isDispositivoMovel()) {
-    // Não é um dispositivo móvel (PC)
-    meuEventoPC();
-  }
+if (!isDispositivoMovel()) {
+  meuEventoPC();
+}
 
 function exibirBotão() {
-    cima.classList.add('visivel');
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      cima.classList.remove('visivel');
-    }, 2000);
+  cima.classList.add('visivel');
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    cima.classList.remove('visivel');
+  }, 2000);
 }
 
 window.addEventListener('scroll', () =>{
-    exibirBotão()
+  exibirBotão()
 })
 
 setInterval( function(){
-    nextImage();
+  nextImage();
 }, 10000)
 
 function nextImage(){
-    count++;
-    if(count>4){
-        count = 1;
-    }
+  count++;
+  if(count>4){
+    count = 1;
+  }
 
-    document.getElementById('radio'+count).checked = true;
+  document.getElementById('radio'+count).checked = true;
 }
 
 function loading(){
-    document.getElementsByClassName("caixa-load")[0].style.display = "none"
-    document.getElementsByClassName("content")[0].style.display = "block"
+  document.getElementsByClassName("caixa-load")[0].style.display = "none"
+  document.getElementsByClassName("content")[0].style.display = "block"
 }
 
-function meuEventoPC() {
-    // Adicione aqui seus eventos específicos para dispositivos de desktop (PC)
-    // Exemplo:
-    item1.addEventListener('click', () => {
-      setTimeout(() => {
-        lista1.classList.toggle('donw');
-      }, 200);
-    });
+function meuEventoMobile() {
+  item1.addEventListener('click', () => {
+    setTimeout(() => {
+      lista1.classList.toggle('donw');
+    }, 200);
+  });
   
-    item2.addEventListener('click', () => {
-      setTimeout(() => {
-        lista2.classList.toggle('donw');
-      }, 200);
-    });
+  item2.addEventListener('click', () => {
+    setTimeout(() => {
+      lista2.classList.toggle('donw');
+    }, 200);
+  });
   
-    item3.addEventListener('click', () => {
-      setTimeout(() => {
-        lista3.classList.toggle('donw');
-      }, 200);
-    });
+  item3.addEventListener('click', () => {
+     setTimeout(() => {
+      lista3.classList.toggle('donw');
+     }, 200);
+  });
   
-    item4.addEventListener('click', () => {
-      setTimeout(() => {
-        lista4.classList.toggle('donw');
-      }, 200);
-    });
-  }
-  
-  meuEventoPC();
-  
-  meuEventoMobile();
+  item4.addEventListener('click', () => {
+     setTimeout(() => {
+       lista4.classList.toggle('donw');
+    }, 200);
+  });
+}
   
   
